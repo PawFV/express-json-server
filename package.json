@@ -1,0 +1,21 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "api": "node fetch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^5.1.0",
+    "lowdb": "^1.0.0",
+    "nodemon": "^2.0.6"
+  }
+}
