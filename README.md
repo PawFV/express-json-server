@@ -44,10 +44,6 @@ $ npm run api
 
 ### Examples:
 
-```cmd
-$ npm run api
-```
-
 #### Populate DB with random data
 
 `npm run api`
