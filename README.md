@@ -11,6 +11,7 @@
     - [Examples:](#examples)
       - [Populate DB with random data](#populate-db-with-random-data)
       - [Update a user](#update-a-user)
+      - [Generate mock data](#generate-mock-data)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -47,6 +48,7 @@ $ npm run api
 #### Populate DB with random data
 
 `npm run api`
+
 ```js
 // fetch.js
 
@@ -69,7 +71,9 @@ populate(50)
 ```
 
 #### Update a user
+
 `npm run api`
+
 ```js
 // fetch.js
 
@@ -88,6 +92,38 @@ updateUser("9c2fc126-0766-42b2-b26d-032a3540e442", { name: 'Paw', sex: 'Not foun
     sex: 'Not found'
   }
 }
+```
+
+#### Generate mock data
+
+it uses [faker.js](https://www.npmjs.com/package/faker) to generate random realistic data, make the wanted changes here.
+
+```js
+// routes/users.js
+
+router.post('/populate/:number', (req, res) => {
+  const { number } = req.params
+
+  for (let i = 0; i < number; i++) {
+    // Random fake data. more on https://www.npmjs.com/package/faker
+    const user = {
+      id: faker.random.uuid(),
+      name: faker.name.firstName(),
+      email: faker.internet.email(),
+      address: faker.address.direction(),
+      country: faker.address.county(),
+      phone: faker.phone.phoneNumber(),
+      vehicle: faker.vehicle.vehicle(),
+      model: faker.vehicle.model(),
+      color: faker.vehicle.color(),
+      avatarUrl: faker.image.avatar(),
+      bgImg: faker.image.nature()
+    }
+    db.get('users').push(user).write()
+  }
+
+  res.json({ message: 'users created!', 'users': db.get('users').value() })
+})
 ```
 
 ## Contributing
