@@ -9,6 +9,7 @@ function api(endpoint = '', method, data = {}) {
     .catch(({ response }) => console.log(response.data))
 }
 
+
 const populate = number => api(`populate/${number}`, 'post')
 const getUsers = () => api('', 'get')
 const getUser = id => api(`${id}`, 'get')
@@ -20,10 +21,10 @@ const deleteUsers = () => api('', 'delete')
 
 // populate(50)
 // getUsers()
-// getUser(firstDbUser)
+// getUser("3d77b9d8-9c29-4af7-90fb-b68c3f48808f")
 // deleteUser(firstDbUser)
 // deleteUsers()
-// updateUser(firstDbUser, { name: 'Rawson' })
+// updateUser("a7f17c09-0840-47b5-ba0f-b9f522fa6a8c", { name: 'Rose' })
 
 // LOG DB
 // console.log(dbResults)

@@ -15,4 +15,4 @@ app.use(bodyParser.json())
 app.use('/users', require('./routes/users'))
 
 app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port port!`))
+app.listen(port, () => console.log(`App listening on localhost:${port} port!`))
