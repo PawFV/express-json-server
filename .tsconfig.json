@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types", "./src/TS/*.d.ts"]
+  },
+  "include": ["src/**/*.ts", "src/TS/db.d.ts"],
+  "exclude": ["node_modules"]
+}
