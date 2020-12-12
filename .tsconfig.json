@@ -5,11 +5,11 @@
     "rootDir": "./",
     "outDir": "./build",
     "esModuleInterop": true,
-    "strict": true,
-    "noImplicitAny": false,
+    "strict": false,
+    "noImplicitAny": true,
     "moduleResolution": "node",
     "typeRoots": ["node_modules/@types", "./src/TS/*.d.ts"]
   },
-  "include": ["src/**/*.ts", "src/TS/db.d.ts"],
+  "include": ["src/**/*.ts", "config/**/*.ts", "src/TS/db.d.ts"],
   "exclude": ["node_modules"]
 }

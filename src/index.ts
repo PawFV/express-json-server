@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /**
  * @file Mounts an Express http server.
  * @author PawFV <https://github.com/PawFV>

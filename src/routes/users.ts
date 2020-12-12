@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import faker from 'faker'
-import { db } from './db'
+import  db  from './db'
 const router = Router()
 /** @description Populates database */
 router.post('/populate/:number', (req, res) => {
