@@ -3,13 +3,13 @@
  * @file Mounts an Express http server.
  * @author PawFV <https://github.com/PawFV>
  */
+import bodyParser from 'body-parser'
+import cors from 'cors'
 import express from 'express'
 const app = express()
 const port = 3000
-import cors from 'cors'
-import bodyParser from 'body-parser'
 
-app.use(cors())
+app.use(cors() as any)
 app.use(bodyParser.json())
 
 // routes

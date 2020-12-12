@@ -1,12 +1,13 @@
 import { Router } from 'express'
 import faker from 'faker'
-import  db  from './db'
+import db from './db'
+
 const router = Router()
 /** @description Populates database */
 router.post('/populate/:number', (req, res) => {
   const { number } = req.params
 
-  for (let i = 0; i < number; i++) {
+  for (let i = 0; i < +number; i++) {
     const user = {
       id: faker.random.uuid(),
       name: faker.name.firstName(),
