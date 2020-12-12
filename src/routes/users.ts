@@ -1,7 +1,7 @@
-const router = require('express').Router()
-const faker = require('faker')
-const { db } = require('./db')
-
+import { Router } from 'express'
+import faker from 'faker'
+import { db } from './db'
+const router = Router()
 /** @description Populates database */
 router.post('/populate/:number', (req, res) => {
   const { number } = req.params

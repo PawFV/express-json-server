@@ -2,11 +2,11 @@
  * @file Mounts an Express http server.
  * @author PawFV <https://github.com/PawFV>
  */
-const express = require('express')
+import express from 'express'
 const app = express()
 const port = 3000
-const cors = require('cors')
-const bodyParser = require('body-parser')
+import cors from 'cors'
+import bodyParser from 'body-parser'
 
 app.use(cors())
 app.use(bodyParser.json())
