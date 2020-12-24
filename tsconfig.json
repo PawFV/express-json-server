@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "ESNext",
     "module": "commonjs",
     "rootDir": "./",
     "outDir": "./build",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": false,
     "noImplicitAny": true,
+    "resolveJsonModule": true,
     "moduleResolution": "node",
-    "typeRoots": ["node_modules/@types", "./src/TS/*.d.ts"]
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types", "./src/*.d.ts"]
   },
   "include": ["src/**/*.ts", "config/**/*.ts", "src/TS/db.d.ts"],
   "exclude": ["node_modules"]
